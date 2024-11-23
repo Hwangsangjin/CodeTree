@@ -6,22 +6,18 @@ int main()
     int A, B, C;
     cin >> A >> B >> C;
 
-    int Min;
-
-    if (A < B)
+    if (A <= B && A <= C)
     {
-        Min = A;
+        cout << A;
+    }
+    else if (B <= A && B <= C)
+    {
+        cout << B;
     }
     else
     {
-        Min = B;
+        cout << C;
     }
 
-    if (C < Min)
-    {
-        Min = C;
-    }
-
-    cout << Min;
     return 0;
 }
