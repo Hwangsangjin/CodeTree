@@ -4,25 +4,14 @@ using namespace std;
 int main()
 {
     int AMat, AEng;
-    cin >> AMat >> AEng;
-
     int BMat, BEng;
+    
+    cin >> AMat >> AEng;
     cin >> BMat >> BEng;
 
-    if (AMat > BMat)
+    if (AMat > BMat || (AMat == BMat && AEng > BEng))
     {
         cout << 'A';
-    }
-    else if (AMat == BMat)
-    {
-        if (AEng > BEng)
-        {
-            cout << 'A';
-        }
-        else
-        {
-            cout << 'B';
-        }
     }
     else
     {
