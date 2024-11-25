@@ -6,21 +6,21 @@ int main()
     int M;
     cin >> M;
 
-    if (3 <= M && M <= 5)
+    if (12 <= M || M <= 2)
+    {
+        cout << "Winter";
+    }
+    else if (M <= 5)
     {
         cout << "Spring";
     }
-    else if (6 <= M && M <= 8)
+    else if (M <= 8)
     {
         cout << "Summer";
     }
-    else if (9 <= M && M <= 11)
-    {
-        cout << "Fall";
-    }
     else
     {
-        cout << "Winter";
+        cout << "Fall";
     }
 
     return 0;
