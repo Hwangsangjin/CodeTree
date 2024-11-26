@@ -26,7 +26,7 @@ int main()
     {
         Count++;
     }
-    
-    cout (Count >= 2 ? 'E' : 'N');
+
+    cout << (Count >= 2 ? 'E' : 'N');
     return 0;
 }
