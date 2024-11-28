@@ -6,9 +6,9 @@ int main()
     int N;
     cin >> N;
 
-    for (int i = 1; i <= 5; i++)
+    for (int i = N; i <= N * 5; i += N)
     {
-        cout << N * i << " ";
+        cout << i << " ";
     }
 
     return 0;
