@@ -3,17 +3,13 @@ using namespace std;
 
 int main()
 {
-    int N, Index = 1;
+    int N, Index = 3;
     cin >> N;
 
     while (Index <= N)
     {
-        if (Index % 3 == 0)
-        {
-            cout << Index << " ";
-        }
-
-        Index++;
+        cout << Index << " ";
+        Index += 3;
     }
 
     return 0;
