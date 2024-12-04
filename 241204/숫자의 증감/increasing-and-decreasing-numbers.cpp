@@ -18,7 +18,7 @@ int main()
     {
         for (int i = N; i >= 1; i--)
         {
-            cout << i << "";
+            cout << i << " ";
         }
     }
 
