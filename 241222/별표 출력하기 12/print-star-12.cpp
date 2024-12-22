@@ -10,7 +10,7 @@ int main()
     {
         for (int j = 0; j < N; j++)
         {
-            if (i == 0 || j == i || j == N - (i + 1))
+            if (i == 0 || (j % 2 == 1 && i <= j))
                 cout << "* ";
             else
                 cout << "  ";
