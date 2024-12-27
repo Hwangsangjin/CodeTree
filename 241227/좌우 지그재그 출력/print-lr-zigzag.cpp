@@ -10,7 +10,7 @@ int main()
     {
         for (int j = 0; j < N; ++j)
         {
-            cout << (i % 2 == 0 ? N * i + j + 1 : N * (i + 1) - j) << ' ';
+            cout << (i % 2 == 0 ? N * i + j + 1 : N * i + N - j) << ' ';
         }
 
         cout << '\n';
