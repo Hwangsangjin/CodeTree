@@ -16,6 +16,8 @@ int main()
         ++Count;
     }
 
+    cout << fixed;
+    cout.precision(1);
     cout << Sum << " " << static_cast<double>(Sum) / Count;
     return 0;
 }
