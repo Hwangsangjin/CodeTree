@@ -7,10 +7,13 @@ int main()
     int A, B;
     cin >> A >> B;
 
-    while (A > 0)
+    while (true)
     {
         Array[A % B]++;
         A /= B;
+
+        if (A <= 1)
+            break;
     }
 
     int Sum = 0;
