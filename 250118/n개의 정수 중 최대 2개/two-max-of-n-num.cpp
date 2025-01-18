@@ -25,7 +25,7 @@ int main()
     for (int i = 0; i < N; ++i)
     {
         if (Array[i] == Max1 && Max2 == INT_MIN)
-            Max2 = Max1;
+            Max2 = Array[i];
 
         if (Array[i] < Max1 && Array[i] > Max2)
             Max2 = Array[i];
