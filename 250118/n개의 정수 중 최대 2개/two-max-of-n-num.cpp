@@ -14,7 +14,7 @@ int main()
 
     int Max1 = INT_MIN;
 
-    for (int i = 1; i < N; ++i)
+    for (int i = 0; i < N; ++i)
     {
         if (Max1 < Array[i])
             Max1 = Array[i];
@@ -24,6 +24,9 @@ int main()
 
     for (int i = 0; i < N; ++i)
     {
+        if (Array[i] == Max1 && Max2 == INT_MIN)
+            Max2 = Max1;
+
         if (Array[i] < Max1 && Array[i] > Max2)
             Max2 = Array[i];
     }
