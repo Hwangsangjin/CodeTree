@@ -13,21 +13,21 @@ int main()
         cin >> Array[i];
 
     int Max1 = INT_MIN;
+    int Max2 = INT_MIN;
+    int MaxIndex = 0;
 
     for (int i = 0; i < N; ++i)
     {
-        if (Max1 < Array[i])
+        if (Max1 <Array[i])
+        {
             Max1 = Array[i];
+            MaxIndex = i;
+        }
     }
     
-    int Max2 = INT_MIN;
-
     for (int i = 0; i < N; ++i)
     {
-        if (Array[i] == Max1 && Max2 == INT_MIN)
-            Max2 = Array[i];
-
-        if (Array[i] < Max1 && Array[i] > Max2)
+        if (Max2 < Array[i] && i != MaxIndex)
             Max2 = Array[i];
     }
 
