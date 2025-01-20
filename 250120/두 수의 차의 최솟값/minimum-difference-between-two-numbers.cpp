@@ -1,5 +1,4 @@
 #include <iostream>
-#include <climits>
 using namespace std;
 
 int main()
@@ -12,23 +11,12 @@ int main()
     for (int i = 0; i < N; ++i)
         cin >> A[i];
 
-    int Min = INT_MAX;
+    int Min = A[1] - A[0];
 
-    for (int i = 0; i < N; ++i)
+    for (int i = 2; i < N; ++i)
     {
-        for (int j = i + 1; j < N; ++j)
-        {
-            if (A[i] > A[j])
-            {
-                if (A[i] - A[j] < Min)
-                    Min = A[i] - A[j];
-            }
-            else
-            {
-                if (A[j] - A[i] < Min)
-                    Min = A[j] - A[i];
-            }
-        }
+        if (Min > A[i] - A[i - 1])
+            Min = A[i] - A[i - 1];
     }
 
     cout << Min;
