@@ -19,11 +19,8 @@ int main()
     {
         Sum += Arr[i].length();
 
-        for (int j = 0; j < Arr[i].length(); ++j)
-        {
-            if (Arr[i][j] == 'a')
-                ++Count;
-        }
+        if (Arr[i][0] == 'a')
+            ++Count;
     }
 
     cout << Sum << " " << Count;
