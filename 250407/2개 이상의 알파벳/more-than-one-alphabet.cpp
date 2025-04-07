@@ -3,23 +3,10 @@ using namespace std;
 
 bool Answer(string Str)
 {
-    bool Alphabet[26] = {};
-    int Cnt = 0;
-
-    for (char C : Str)
+    for (int i = 1; i < Str.length(); ++i)
     {
-        if (isalpha(C))
-        {
-            int Idx = tolower(C) - 'a';
-            if (!Alphabet[Idx])
-            {
-                Alphabet[Idx] = true;
-                ++Cnt;
-
-                if (Cnt >= 2)
-                    return true;
-            }
-        }
+        if (Str[i] != Str[0])
+            return true;
     }
 
     return false;
