@@ -8,8 +8,11 @@ bool Cmp(const tuple<int, int, int>& A, const tuple<int, int, int>& B)
 {
     if (get<0>(A) != get<0>(B))
         return get<0>(A) > get<0>(B);
-    
-    return get<1>(A) > get<1>(B);
+
+    if (get<1>(A) != get<1>(B))
+        return get<1>(A) > get<1>(B);
+
+    return get<2>(A) < get<2>(B);
 }
 
 int main()
@@ -23,7 +26,6 @@ int main()
     {
         int Height, Weight;
         cin >> Height >> Weight;
-
         Tuple[i] = make_tuple(Height, Weight, i + 1);
     };
 
