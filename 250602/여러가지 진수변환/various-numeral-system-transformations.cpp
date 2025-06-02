@@ -6,17 +6,17 @@ int main()
     int N, B;
     cin >> N >> B;
 
+     if (N == 0)
+     {
+        cout << 0;
+        return 0;
+    }
+
     int A[1001] = {};
     int Count = 0;
     
-    while (true)
+   while (N > 0)
     {
-        if (N < 2)
-        {
-            A[Count++] = N;
-            break;
-        }
-    
         A[Count++] = N % B;
         N /= B;
     }
