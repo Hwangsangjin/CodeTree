@@ -3,22 +3,26 @@ using namespace std;
 
 int main()
 {
-    int N = 29;
+    int N, B;
+    cin >> N >> B;
+
     int A[1001] = {};
     int Count = 0;
     
     while (true)
     {
-        if(n < 2) {
-            digits[cnt++] = n;
+        if (N < 2)
+        {
+            A[Count++] = N;
             break;
         }
     
-        digits[cnt++] = n % 2;
-        n /= 2;
+        A[Count++] = N % B;
+        N /= B;
     }
     
-    // print binary number
-    for(int i = cnt - 1; i >= 0; i--)
-        cout << digits[i];
+    for (int i = Count - 1; i >= 0; --i)
+        cout << A[i];
+    
+    return 0;
 }
