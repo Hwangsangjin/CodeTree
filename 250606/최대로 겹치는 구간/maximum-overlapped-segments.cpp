@@ -16,7 +16,7 @@ int main()
         X1 += 100;
         X2 += 100;
 
-        for (int j = X1; j <= X2; ++j)
+        for (int j = X1; j < X2; ++j)
             ++A[j];
     }
 
